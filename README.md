@@ -16,6 +16,13 @@ The heart diseases data contains the following variates:
 1. *blood pressures* of patients
 2. *medication records* {0,1} that indicating not receiving/receiving heart medication
 3. *age* of a patient in years
+The blood pressure data of the patients with/ without medication are presented in Fig. 1.
+
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/45757826/57534050-6ec44080-733f-11e9-88bb-1c9a4ac9d323.png">
+</p>
+Figure 1. medication vs.  blood presure 
+
 
 **Our objective** is to 
 
@@ -110,7 +117,7 @@ So, we can use the [binary search method](#) to find this region. Here, <img src
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
 </p>
 
-Figure 1. The predictions and the prediction regions of the four new patients. 
+Figure 1. The predictions and the prediction regions (blue lines) of the four new patients. 
 
 
 We can see from Fig. 1 that
