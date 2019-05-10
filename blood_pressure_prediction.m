@@ -7,7 +7,7 @@ data = load('data_bloodpressure_03.csv');
 LS_estimate;
 
 % calculate the confidence interval of parameters
-CI_calculation;
+parameter_CI;
 
 % calculate predictive confidence interval of the new patients
 predictive_CI;
