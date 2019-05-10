@@ -1,4 +1,4 @@
-# Predictive-inference-of-Heart_Diseases
+# Predictive-Inference-of-Heart_Diseases
 
 # Table of Content
 - [Data Decription](#description)
