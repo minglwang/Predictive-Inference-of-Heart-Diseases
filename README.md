@@ -1,1 +1,1 @@
-# heart_disease_prediction
+# Predictive-inference-of-Heart_Diseases
