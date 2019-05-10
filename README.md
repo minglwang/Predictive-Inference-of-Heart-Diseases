@@ -144,7 +144,7 @@ In this section, we will use the *age* and *blood pressure* as our input feature
 - a generative method: Gaussian covariate model
 - a discriminative method: Bernoulli approach  
 
-## Gaussian covariate (mixture) model
+## Gaussian covariate model
 
 The Gaussian covariate models are used for the data,
 
