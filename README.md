@@ -1,6 +1,6 @@
 
       
-# Predictive-Inference-of-Heart_Diseases
+# Predictive-Inferences-of-Heart_Diseases
 
 # Table of Content
 - [Data Decription](#description)
@@ -75,7 +75,7 @@ where <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20C_%7Bii%7D%3D%5Cleft%5B%
 Now we have
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/%5Ctext%7BCov%7D%5B%5Cphi%5Cvarepsilon%5D%3D%5CE_%7Bn%7D%5B%5Cphi%5Cvarepsilon%5Cvarepsilon%5ET%5Cphi%5ET%5D." alt="\text{Cov}[\phi\varepsilon]=\E_{n}[\phi\varepsilon\varepsilon^T\phi^T]." />
+<img src="https://tex.s2cms.ru/svg/%5Ctext%7BCov%7D%5B%5Cphi%5Cvarepsilon%5D%3DE_%7Bn%7D%5B%5Cphi%5Cvarepsilon%5Cvarepsilon%5ET%5Cphi%5ET%5D." alt="\text{Cov}[\phi\varepsilon]=E_{n}[\phi\varepsilon\varepsilon^T\phi^T]." />
 </p>
 
 Given a confidence level <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Calpha%3D95%5C%25" alt=" \inline \alpha=95\%" />, we can get a confidence region 
@@ -96,7 +96,7 @@ Consider the point <img src="https://tex.s2cms.ru/svg/%5Cinline%20(x_%7B%5C%231%
 </p>
 
 The inconsistency rank of <img src="https://tex.s2cms.ru/svg/%5Cinline%20y_%7B%5C%23%201%7D" alt="\inline y_{\# 1}" /> is  defined as
-<img src="https://tex.s2cms.ru/svg/r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%3D%5Cfrac%7B1%7D%7Bn%2B1%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%2B1%7DI%5C%7Bs_i%5Cleq%20s_%7Bn%2B1%7D%5C%7D" alt="r(y_{\text{\#}1})=\frac{1}{n+1}\sum_{i=1}^{n+1}I\{s_i\leq s_{n+1}\}" /> and <img src="https://tex.s2cms.ru/svg/(n%2B1)*r(y_%7B%5Ctext%7B%5C%23%7D1%7D)" alt="(n+1)*r(y_{\text{\#}1})" /> is uniformly distributed. Thus, we can constructed a non-parametric prediction region as
+<img src="https://tex.s2cms.ru/svg/%5Cinline%20r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%3D%5Cfrac%7B1%7D%7Bn%2B1%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%2B1%7DI%5C%7Bs_i%5Cleq%20s_%7Bn%2B1%7D%5C%7D" alt="\inline r(y_{\text{\#}1})=\frac{1}{n+1}\sum_{i=1}^{n+1}I\{s_i\leq s_{n+1}\}" /> and <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20(n%2B1)*r(y_%7B%5Ctext%7B%5C%23%7D1%7D)" alt=" \inline (n+1)*r(y_{\text{\#}1})" /> is uniformly distributed. Thus, we can constructed a non-parametric prediction region as
 
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%09%5Cmathcal%7BY%7D_%7B%5Calpha%7D%3D%5Cleft%5C%7By_%7B%5Ctext%7B%5C%23%7D1%7D%5Cmid%20(n%2B1)(1-%5Calpha)%5Cgeq%20(n%2B1)r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%5Cright%5C%7D%0A" alt="	\mathcal{Y}_{\alpha}=\left\{y_{\text{\#}1}\mid (n+1)(1-\alpha)\geq (n+1)r(y_{\text{\#}1})\right\}
