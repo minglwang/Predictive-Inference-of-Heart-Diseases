@@ -112,14 +112,19 @@ Consider the point <img src="https://tex.s2cms.ru/svg/%5Cinline%20(x_%7B%5C%231%
 </p>
 
 The inconsistency rank of <img src="https://tex.s2cms.ru/svg/%5Cinline%20y_%7B%5C%23%201%7D" alt="\inline y_{\# 1}" /> is  defined as
-<img src="https://tex.s2cms.ru/svg/%5Cinline%20r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%3D%5Cfrac%7B1%7D%7Bn%2B1%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%2B1%7DI%5C%7Bs_i%5Cleq%20s_%7Bn%2B1%7D%5C%7D" alt="\inline r(y_{\text{\#}1})=\frac{1}{n+1}\sum_{i=1}^{n+1}I\{s_i\leq s_{n+1}\}" /> and <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20(n%2B1)*r(y_%7B%5Ctext%7B%5C%23%7D1%7D)" alt=" \inline (n+1)*r(y_{\text{\#}1})" /> is uniformly distributed. Thus, we can constructed a non-parametric prediction region as
+ 
+ <p align = "center">
+ <img src="https://tex.s2cms.ru/svg/%20r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%3D%5Cfrac%7B1%7D%7Bn%2B1%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%2B1%7DI%5C%7Bs_i%5Cleq%20s_%7Bn%2B1%7D%5C%7D" alt=" r(y_{\text{\#}1})=\frac{1}{n+1}\sum_{i=1}^{n+1}I\{s_i\leq s_{n+1}\}" /> 
+</p>
+
+ and <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20(n%2B1)*r(y_%7B%5Ctext%7B%5C%23%7D1%7D)" alt=" \inline (n+1)*r(y_{\text{\#}1})" /> is uniformly distributed. Thus, we can constructed a non-parametric prediction region as
 
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%09%5Cmathcal%7BY%7D_%7B%5Calpha%7D%3D%5Cleft%5C%7By_%7B%5Ctext%7B%5C%23%7D1%7D%5Cmid%20(n%2B1)(1-%5Calpha)%5Cgeq%20(n%2B1)r(y_%7B%5Ctext%7B%5C%23%7D1%7D)%5Cright%5C%7D%0A" alt="	\mathcal{Y}_{\alpha}=\left\{y_{\text{\#}1}\mid (n+1)(1-\alpha)\geq (n+1)r(y_{\text{\#}1})\right\}
 " />
 </p>
 
-So, we can use the [binary search method](#) to find this region. Here, <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 2. The detailed implementations are given in [predictive code.m](#).
+So, we can use the [binary search method](#) to find this region. Here,  <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 2. The detailed implementations are given in [predictive code.m](#).
 
 <p align = "center">
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
