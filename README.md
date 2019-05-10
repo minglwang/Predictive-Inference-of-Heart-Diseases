@@ -262,10 +262,10 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 
 # How To Use
 
-To run the code, one should add folder "heart_disease_data" to path using the code
+To run the code, one should add folder "heart_disease_data" and "predictive_inference"to path using the code
 
 ```Matlab
-addpath('.../heart_disease_data')
+addpath('your directories/Predictive-Inferences-of-Heart-Diseases/heart_disease_data')
 ```
 - run "blood_pressure_prediction.m" to get the results in Fig. 2
 - run "disease_prognosis.m" to get the results in Fig. 3 to Fig. 5 
