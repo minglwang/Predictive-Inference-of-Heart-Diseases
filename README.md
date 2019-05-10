@@ -18,8 +18,13 @@ The blood pressure data of the patients with/ without medication are presented i
 
 <p align = "center">
 <img width = "300" height = "200" src="https://user-images.githubusercontent.com/45757826/57534050-6ec44080-733f-11e9-88bb-1c9a4ac9d323.png">
+	
+						Figure 1. medication vs.  blood presure
 </p>
-Figure 1. medication vs.  blood presure 
+ 
+
+
+
 
 There are 4 new patients with their age and blood pressure as follows:
 
@@ -117,9 +122,10 @@ So, we can use the [binary search method](#) to find this region. Here, <img src
 
 <p align = "center">
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
+	
+			Figure 1. The predictions and the prediction regions (blue lines) of the four new patients. 
 </p>
 
-Figure 1. The predictions and the prediction regions (blue lines) of the four new patients. 
 
 
 We can see from Fig. 1 that
