@@ -19,21 +19,11 @@ The heart diseases data contains the following variates:
 The blood pressure data of the patients with/ without medication are presented in Fig. 1.
 
 <p align = "center">
-<img src="https://user-images.githubusercontent.com/45757826/57534050-6ec44080-733f-11e9-88bb-1c9a4ac9d323.png">
+<img width = "300" height = "200" src="https://user-images.githubusercontent.com/45757826/57534050-6ec44080-733f-11e9-88bb-1c9a4ac9d323.png">
 </p>
 Figure 1. medication vs.  blood presure 
 
-
-**Our objective** is to 
-
-- predict his/her blood pressure with confidence intervals
-
-- prognosis whether the patient has heart disease or not
-
-where a new patient arrives at a hospital. 
-
-# Predictive Inferences
-Let <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" /> denote the blood pressure, <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1%2C%20x_2" alt="\inline x_1, x_2" /> denote the *binary records* and *age*, respectively. There are 4 new patients with their age and blood pressure as follows:
+There are 4 new patients with their age and blood pressure as follows:
 
 | patient #        | Age           | medication  |
 | ------------- |:-------------:| -----:|
@@ -41,6 +31,20 @@ Let <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" /> denote 
 | 2      | 61      |   no |
 | 3 | 38     |    yes |
 |4| 61|yes|
+
+
+## Our objective 
+
+When a new patient arrives at a hospital, we would like to
+
+- predict the blood pressure of new patients with confidence intervals
+
+- prognosis whether the patient has heart disease or not
+
+
+
+# Predictive Inferences
+Let <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" /> denote the blood pressure, <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1%2C%20x_2" alt="\inline x_1, x_2" /> denote the *binary records* and *age*, respectively. 
 
 ## Blood Pressure Prediction
 
