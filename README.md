@@ -12,7 +12,7 @@
 
 # Data Decription
 
-The heart diseases data contains the following variates:
+The heart diseases data, stored in [data_bloodpressure_03.csv](#) and [data_heart_01_y0.csv](#) and [data_heart_01_y1.csv](#), contain the following variates:
 1. *blood pressures* of patients
 2. *medication records* {0,1} that indicating not receiving/receiving heart medication
 3. *age* of a patient in years
