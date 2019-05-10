@@ -112,6 +112,10 @@ So, we can use the [binary search method](#) to find this region. Here, <img src
 
 Figure 1. The predictions and the prediction regions of the four new patients. 
 
+**We can see from Fig. 1 that patients with medication will have a lower blood pressure by do comparison that (patient #1 > patient #3, patient #2 > patient #4) and aged patients are more likely to have higher blood pressure**.
+
+
+
 ## Disease prognosis
 
 
