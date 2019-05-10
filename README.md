@@ -4,7 +4,7 @@
 - [Data Decription](#description)
 - [Predictive Inferences](#predictive)
   - [Blood Pressure Prediction](#prediction)
-  - [disease prognosis](#prognosis)
+  - [Disease Prognosis](#prognosis)
 - [How To Use](#how_to_use)
 
 
@@ -140,7 +140,7 @@ We can see from Fig. 2 that
 
 [Back To The Top](#predictive-inferences-of-heart-diseases)
 
-## Disease prognosis
+## Disease Prognosis
 
 In this section, we will use the *age* and *blood pressure* as our input feature to prognosis whether a patient has heart disease or not ({1,0}). We propose two approaches:
 - a generative method: Gaussian covariate model
@@ -246,13 +246,13 @@ Fig. 4 and Fig. 5, respectively.
 <p align = "center">
 <img width = "400" height ="300" src = "https://user-images.githubusercontent.com/45757826/57550495-df328800-7366-11e9-9eb9-b94f181338c7.png">
 
-Figure 4. The generative model and its decision boundary
+					Figure 4. The generative model and its decision boundary
 </p>
 
 <p align = "center">
 <img width = "400" height ="300" src = "https://user-images.githubusercontent.com/45757826/57550451-b611f780-7366-11e9-925d-3bc0aca8b330.png">
 
-Figure 5. The generative model and its decision boundary
+					Figure 5. The generative model and its decision boundary
 </p>
 
 By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a smoother nonlinear boundary which better separates the two classes of data.
