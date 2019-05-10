@@ -27,6 +27,7 @@ where a new patient arrives at a hospital.
 
 # Predictive Inferences
 Let <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" /> denote the blood pressure, <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1%2C%20x_2" alt="\inline x_1, x_2" /> denote the *binary records* and *age*, respectively. There are 4 new patients with their age and blood pressure as follows:
+
 | patient #        | Age           | medication  |
 | ------------- |:-------------:| -----:|
 | 1     | 38 | no |
