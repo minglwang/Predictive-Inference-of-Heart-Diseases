@@ -14,7 +14,8 @@ The heart diseases data, stored in [data_bloodpressure_03.csv](#) and [data_hear
 1. *blood pressures* of patients
 2. *medication records* {0,1} that indicating not receiving/receiving heart medication
 3. *age* of a patient in years
-The blood pressure data of the patients with/ without medication are presented in Fig. 1.
+
+The blood pressure data of the patients with/ without medications are presented in Fig. 1.
 
 <p align = "center">
 <img width = "300" height = "200" src="https://user-images.githubusercontent.com/45757826/57534050-6ec44080-733f-11e9-88bb-1c9a4ac9d323.png">
@@ -26,7 +27,7 @@ The blood pressure data of the patients with/ without medication are presented i
 
 
 
-There are 4 new patients with their age and blood pressure as follows:
+There are 4 new patients with their ages and blood pressures as follows:
 
 | patient #        | Age           | medication  |
 | ------------- |:-------------:| -----:|
@@ -118,17 +119,17 @@ The inconsistency rank of <img src="https://tex.s2cms.ru/svg/%5Cinline%20y_%7B%5
 " />
 </p>
 
-So, we can use the [binary search method](#) to find this region. Here, <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 1. The detailed implementations are given in [predictive code.m](#).
+So, we can use the [binary search method](#) to find this region. Here, <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 2. The detailed implementations are given in [predictive code.m](#).
 
 <p align = "center">
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
 	
-			Figure 1. The predictions and the prediction regions (blue lines) of the four new patients. 
+			Figure 2. The predictions and the prediction regions (blue lines) of the four new patients. 
 </p>
 
 
 
-We can see from Fig. 1 that
+We can see from Fig. 2 that
 - patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
 - aged patients are more likely to have higher blood pressure.
 
