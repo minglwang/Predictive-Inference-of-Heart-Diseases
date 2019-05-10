@@ -10,7 +10,7 @@
 
 # Data Description
 
-The heart diseases data, stored in [data_bloodpressure_03.csv](#) and [data_heart_01_y0.csv](#) and [data_heart_01_y1.csv](#), contain the following variates:
+The heart diseases data, stored in [data_bloodpressure_03.csv](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/heart_disease_data/data_bloodpressure_03.csv) and [data_heart_01_y0.csv](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/heart_disease_data/data_heart_01_y0.csv) and [data_heart_01_y1.csv](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/heart_disease_data/data_heart_01_y1.csv), contain the following variates:
 1. *blood pressures* of patients
 2. *medication records* {0,1} that indicating not receiving/receiving heart medication
 3. *age* of a patient in years
