@@ -1,11 +1,11 @@
 # Predictive-Inferences-of-Heart-Diseases
 
 # Table of Content
-- [Data Description](#data_description)
-- [Predictive Inferences](#predictive_inference)
-  - [Blood Pressure Prediction](#blood_pressure)
-  - [Disease Prognosis](#disease_prognosis)
-- [How To Use](#how_to_use)
+- [Data Description](#data-description)
+- [Predictive Inferences](#predictive-inferences)
+  - [Blood Pressure Prediction](#blood-pressure-prediction)
+  - [Disease Prognosis](#disease-prognosis)
+- [How To Use](#how-to-use)
 
 
 # Data Description
