@@ -24,7 +24,7 @@ The heart diseases data contains the following variates:
 - prognosis whether the patient has a heart disease or not
 
 # Predictive Inferences
-Let variables *x1* and *x2* denote the *binary records* and *age*, respectively, we consider a linear predictor with the form:
+Let variables <img src="http://www.sciweavers.org/tex2img.php?eq=x_%7B1%7D%20&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="x_{1} " width="18" height="12" /> and  <img src="http://www.sciweavers.org/tex2img.php?eq=x_%7B1%7D%20&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="x_{2} " width="18" height="12" /> denote the *binary records* and *age*, respectively, we consider a linear predictor with the form:
 <p align = "center">
 <img src="http://www.sciweavers.org/tex2img.php?eq=y%20%3D%20%5Cphi%28x%29%5E%7BT%7D%5Ctheta&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="y = \phi(x)^{T}\theta" width="85" height="21" />
 </p>
