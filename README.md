@@ -115,8 +115,8 @@ Figure 1. The predictions and the prediction regions of the four new patients.
 
 **We can see from Fig. 1 that **
 
-> patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
-> aged patients are more likely to have higher blood pressure.
+- patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
+- aged patients are more likely to have higher blood pressure.
 
 
 
