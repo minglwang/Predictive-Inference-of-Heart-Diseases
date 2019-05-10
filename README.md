@@ -74,7 +74,7 @@ The plug-in estimator for the prediction weight <img src="https://tex.s2cms.ru/s
 " />
 </p>
 
-The calculation is implemented using the codes [least square estimate.m](#).
+The calculation is implemented using the codes [LS_estimate.m](#).
 
 The confidence region for predictive effect of <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cbeta_1" alt="\inline \beta_1" /> and <img src="https://tex.s2cms.ru/svg/%5Cinline%5Cbeta_2" alt="\inline\beta_2" />  are given as 
 
@@ -93,8 +93,9 @@ Now we have
 Given a confidence level <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Calpha%3D95%5C%25" alt=" \inline \alpha=95\%" />, we can get a confidence region 
 	<img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cbeta_1%3D-10.1%5Cpm%200.6" alt="\inline \beta_1=-10.1\pm 0.6" />, <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cbeta_2%3D2.0%5Cpm%200.008." alt="\inline \beta_2=2.0\pm 0.008." />
 
-The code for calculating the confidence interval is given in [confidence_interval.m](#).
+The code for calculating the confidence interval is given in [CI_calculation.m](#).
 
+#### Predictive Confidence interval
 
 Given the *age* and *medication* of the new patients,  we calculate the non-parametric prediction region using the above method. The prediction of new patient # 1 is calculated using the learned predictor above,
 
@@ -121,7 +122,7 @@ The inconsistency rank of <img src="https://tex.s2cms.ru/svg/%5Cinline%20y_%7B%5
 " />
 </p>
 
-So, we can use the [binary search method](#) to find this region. Here,  <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 2. The detailed implementations are given in [predictive code.m](#).
+So, we can use the [binary search method](#) to find this region. Here,  <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 2. The detailed implementations are given in [predictive CI.m](#).
 
 <p align = "center">
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
