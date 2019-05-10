@@ -102,7 +102,7 @@ The inconsistency rank of <img src="https://tex.s2cms.ru/svg/%5Cinline%20y_%7B%5
 So, we can use the binary search method to find this region. Here, <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D%3DE_%7Bn%7D%5By_%7B%5Ctext%7B%5C%23%7D%201%7D%5D" alt=" \inline \hat{y}_{\text{\#}1}=E_{n}[y_{\text{\#} 1}]" />. The search can be conducted from <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7By%7D_%7B%5Ctext%7B%5C%23%7D1%7D" alt="\inline \hat{y}_{\text{\#}1}" /> toward the upper bound and lower bound. After that, we use the augmented set <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctilde%7B%5Cboldsymbol%7Bz%7D%7D%5E%7Bn%2B1%7D" alt="\inline \tilde{\boldsymbol{z}}^{n+1}" /> as our data to update the learned weights and predict the next patient. The predictions and the prediction regions of the four new patients are presented in Fig. 1. The detailed implementations are given in [predictive code.m](#).
 
 <p align = "center">
-<img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531467-d4adc980-7339-11e9-84c6-3e53ce8ac526.png">
+<img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531780-8947eb00-733a-11e9-900e-bb99fe8a0f2f.png">
 </p>
 
 Figure 1. The predictions and the prediction regions of the four new patients. 
