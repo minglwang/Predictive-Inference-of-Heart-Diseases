@@ -1,10 +1,10 @@
 # Predictive-Inferences-of-Heart-Diseases
 
 # Table of Content
-- [Data Decription](#description)
-- [Predictive Inferences](#predictive)
-  - [Blood Pressure Prediction](#prediction)
-  - [Disease Prognosis](#prognosis)
+- [Data Decription](#data_description)
+- [Predictive Inferences](#predictive_inference)
+  - [Blood Pressure Prediction](#blood_pressure)
+  - [Disease Prognosis](#disease_prognosis)
 - [How To Use](#how_to_use)
 
 
@@ -257,9 +257,14 @@ Fig. 4 and Fig. 5, respectively.
 
 By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a smoother nonlinear boundary which better separates the two classes of data.
 
+[Back To The Top](#predictive-inferences-of-heart-diseases)
 
 
 
 
 # How To Use
+
+
+
+[Back To The Top](#predictive-inferences-of-heart-diseases)
 
