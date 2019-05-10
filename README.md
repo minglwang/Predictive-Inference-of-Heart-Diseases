@@ -267,8 +267,8 @@ To run the code, one should add folder "heart_disease_data" and "predictive_infe
 ```Matlab
 addpath('your directories/Predictive-Inferences-of-Heart-Diseases/heart_disease_data')
 ```
-- run "blood_pressure_prediction.m" to get the results in Fig. 2
-- run "disease_prognosis.m" to get the results in Fig. 3 to Fig. 5 
+- run [blood_pressure_prediction.m](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/blood_pressure_prediction.m) to get the results in Fig. 2
+- run [disease_prognosis.m](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/disease_prognosis.m) to get the results in Fig. 3 to Fig. 5 
 
 
 [Back To The Top](#predictive-inferences-of-heart-diseases)
