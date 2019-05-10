@@ -142,6 +142,123 @@ We can see from Fig. 2 that
 
 ## Disease prognosis
 
+In this section, we will use the *age* and *blood pressure* as our input feature to prognosis whether a patient has heart disease or not ({1,0}). We propose two approaches:
+- a generative method: Gaussian covariate model
+- a discriminative method: Bernoulli approach  
+
+## Gaussian covariate (mixture) model
+
+The Gaussian covariate models are used for the data,
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20p(%5Cboldsymbol%7Bx%7D%5Cmid%20y%3Dk)-%3D%5Cmathcal%7BN%7D(%5Cboldsymbol%7Bx%7D%5Cmid%20%5Cboldsymbol%7B%5Cmu%7D_k%2C%5Cboldsymbol%7B%5CSigma%7D_%7Bk%7D)%0A" alt=" p(\boldsymbol{x}\mid y=k)-=\mathcal{N}(\boldsymbol{x}\mid \boldsymbol{\mu}_k,\boldsymbol{\Sigma}_{k})
+" />
+</p>
+
+In the training phase, we have the label of each patient, e.g. we know the patient has heart disease or not. Then, we can use the data to estimate the model parameters, 
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Cboldsymbol%7B%5Cmu%7D_k%3D%5CE_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D%2C%5Cquad%09%5Cboldsymbol%7B%5CSigma%7D_%7Bk%7D%3D%5Ctext%7BCov%7D_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D." alt=" \boldsymbol{\mu}_k=\E_{n} [\boldsymbol{x}_{i}|y=k],\quad	\boldsymbol{\Sigma}_{k}=\text{Cov}_{n} [\boldsymbol{x}_{i}|y=k]." />
+</p>
+
+Then the categorical distribution or prior distribution of each category can be obtained as  
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/p_%7Bn%7D(y%3Dk)%3D%5Cfrac%7Bn_%7Bk%7D%7D%7Bn%7D." alt="p_{n}(y=k)=\frac{n_{k}}{n}." />
+</p>
+
+The generative model is can be calculated using the Bayes theorem,
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/p_(y%3Dk%7C%5Cboldsymbol%7Bx%7D)%3D%5Cfrac%7Bp_%7B%5Chat%7B%5Ctheta%7D%7D(%5Cboldsymbol%7Bx%7D%5Cmid%20y%3Dk)p_%7Bn%7D(y%3Dk)%7D%7Bp_%7B%5Chat%7B%5Ctheta%7D%7D(x)%7D" alt="p_(y=k|\boldsymbol{x})=\frac{p_{\hat{\theta}}(\boldsymbol{x}\mid y=k)p_{n}(y=k)}{p_{\hat{\theta}}(x)}" />
+</p>
+
+where <img src="https://tex.s2cms.ru/svg/%5Cinline%20p_%7B%5Chat%7B%5Ctheta%7D%7D(x)%3D%5Csum_%7By%7Dp_%7B%5Chat%7B%5Ctheta%7D%5Cmid%20y%3Dk%7Dp_%7B%5Chat%7B%5Ctheta%7D%7D(y)" alt="\inline p_{\hat{\theta}}(x)=\sum_{y}p_{\hat{\theta}\mid y=k}p_{\hat{\theta}}(y)" />. The Gaussian co-variate models are presented in Fig. 3. 
+
+<p align = "center">
+<img width = "400" height ="300" src = "https://user-images.githubusercontent.com/45757826/57548665-d4292900-7361-11e9-9037-6f30e4e2fa3f.png">
+
+						Figure 3. Gaussian covariate model
+</p>
+
+
+## Bernoulli approach  
+An alternative approach is to learn <img src="https://tex.s2cms.ru/svg/%5Cinline%20p_%7B%5Ctheta%7D(y%20%5Cmid%20x)" alt="\inline p_{\theta}(y \mid x)" /> directly. Specifically, we consider a parameteric model class <img src="https://tex.s2cms.ru/svg/%5Cinline%20p_%7B%5Ctheta%7D(y%20%5Cmid%20x)%20%3D%20" alt="\inline p_{\theta}(y \mid x) = " /> Bernoulli(<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Cphi%5E%7BT%7D(x)%5Ctheta" alt=" \inline \phi^{T}(x)\theta" />). The resulting loss function is 
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Cell(%5Cboldsymbol%7Bz%7D%5E%7Bn%7D)%20%3D%20-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20y_%7Bi%7D%20%5Cln%20%5Cpi_i(%5Ctheta)%20%2B%20(1-y_%7Bi%7D)(1-%5Cpi_%7Bi%7D(%5Ctheta))" alt=" \ell(\boldsymbol{z}^{n}) = -\sum_{i=1}^{n} y_{i} \ln \pi_i(\theta) + (1-y_{i})(1-\pi_{i}(\theta))" />
+</p>
+
+where 
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%5Cpi_%7Bi%7D(%5Ctheta)%20%3Dp_%7B%5Ctheta%7D(y%3D1%20%5Cmid%20x)%20%3D%5Cfrac%7Bexp(%5Cphi%5E%7BT%7D(x_i)%5Ctheta)%7D%7B1%2B%20exp(%5Cphi%5E%7BT%7D(x_i)%5Ctheta)%7D%20" alt="\pi_{i}(\theta) =p_{\theta}(y=1 \mid x) =\frac{exp(\phi^{T}(x_i)\theta)}{1+ exp(\phi^{T}(x_i)\theta)} " /> 
+</p>
+is a parametric model (**logistic regression model**). Then we use a majorization-minimization search method to compute
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Chat%7B%5Ctheta%7D%20%5Cin%20%5Carg%20%5Cmin%20%5C%3A%20%5Cell_%7B%5Ctheta%7D(%5Cboldsymbol%7Bz%7D%5En)" alt=" \hat{\theta} \in \arg \min \: \ell_{\theta}(\boldsymbol{z}^n)" />
+</p>
+
+- To set up the method, we start with
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Cpartial%5E2%20%5Cell_%7B%5Ctheta%7D(%5Cboldsymbol%7Bz%7D%5E%7Bn%7D)%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%5Cpi_%7Bi%7D(%5Ctheta)(1%20-%20%5Cpi_%7Bi%7D(%5Ctheta)%5Cphi_%7Bi%7D%20%5Cphi_i%5E%7BT%7D)%20%5Cgeq%20%5Cboldsymbol%7B0%7D%2C%20%5Cforall%20%5Ctheta%0A" alt=" \partial^2 \ell_{\theta}(\boldsymbol{z}^{n}) = \sum_{i=1}^{n} \pi_{i}(\theta)(1 - \pi_{i}(\theta)\phi_{i} \phi_i^{T}) \geq \boldsymbol{0}, \forall \theta
+" />
+</p>
+ 
+and therefore <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Cell_%5Ctheta%20" alt=" \inline \ell_\theta " /> is convex in <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctheta" alt="\inline \theta" />. 
+
+- In addition, since <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cpi_%7Bi%7D%20%5Cin%20%5B0%2C1%5D" alt="\inline \pi_{i} \in [0,1]" />, it follows that
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Cpi_%7Bi%7D(1-%5Cpi)%20%5Cleq%20%5Cfrac%7B1%7D%7B4%7D" alt=" \pi_{i}(1-\pi) \leq \frac{1}{4}" />
+</p>
+
+Then we combine the above facts, we see that one possible majorizing function is
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Cell_%7B%5Ctheta%20%5Cmid%20%5Ctilde%7B%5Ctheta%7D%7D%20%3D%20%5Cell_%7B%5Ctilde%7B%5Ctheta%7D%7D%2B%20v%5ET%20(%5Ctheta%20-%20%5Ctilde%7B%5Ctheta%7D)%0A%2B%5Cfrac%7B1%7D%7B2%7D%20(%5Ctheta%20-%20%5Ctilde%7B%5Ctheta%7D)%5E%7BT%7D%20%5Cboldsymbol%7BQ%7D%20(%5Ctheta%20-%20%5Ctilde%7B%5Ctheta%7D)" alt=" \ell_{\theta \mid \tilde{\theta}} = \ell_{\tilde{\theta}}+ v^T (\theta - \tilde{\theta})
++\frac{1}{2} (\theta - \tilde{\theta})^{T} \boldsymbol{Q} (\theta - \tilde{\theta})" />
+</p>
+
+where <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cboldsymbol%7BQ%7D%20%3D%5Cfrac%7B1%7D%7B4%7D%20%5Csum_%7B1%7D%5E%7B4%7D%5Cphi_%7Bi%7D%5Cphi_%7Bi%7D%5ET%20" alt="\inline \boldsymbol{Q} =\frac{1}{4} \sum_{1}^{4}\phi_{i}\phi_{i}^T " /> and <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20v%20%3D%20%5Cpartial%20%5Cell_%7B%5Ctheta%7D%5Cmid_%7B%5Ctheta%3D%5Ctilde%7B%5Ctheta%7D%7D%20%3D%20-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Cpi_%7Bi%7D(%5Ctheta))%5Cphi_%7Bi%7D" alt=" \inline v = \partial \ell_{\theta}\mid_{\theta=\tilde{\theta}} = -\sum_{i=1}^{n}(y_i-\pi_{i}(\theta))\phi_{i}" />.
+
+According to the majorization-minimization (MM) search, we can update <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Ctilde%7B%5Ctheta%7D" alt=" \inline \tilde{\theta}" /> as
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%5Ctilde%7B%5Ctheta%7D_%7Bm%2B1%7D%26%3D%5Ctilde%7B%5Ctheta%7D_%7Bm%7D-Q%5E%7B-1%7Dv%5E%7BT%7D%3D%5Ctilde%7B%5Ctheta%7D_%7Bm%7D%2B4%5Cleft(%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5Cphi_i%5Cphi_i%5E%7BT%7D%5Cright)%5E%7B-1%7D%5Cleft(%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%5Cphi_i%5ET(y_i-%5Cpi(%5Ctilde%7B%5Ctheta%7D_m))%5Cright)." alt="\tilde{\theta}_{m+1}&amp;=\tilde{\theta}_{m}-Q^{-1}v^{T}=\tilde{\theta}_{m}+4\left(\sum_{i=1}^{n}\phi_i\phi_i^{T}\right)^{-1}\left(\sum_{i=1}^{n} \phi_i^T(y_i-\pi(\tilde{\theta}_m))\right)." />
+</p>
+
+After MM has converged, we obtain
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%5Chat%7B%5Ctheta%7D%3D%20%20%5Cbegin%7Bbmatrix%7D%0A%09-41.25%5C%5C%0A%09-0.18%5C%5C%0A%090.42%5C%5C%0A%09%5Cend%7Bbmatrix%7D" alt="\hat{\theta}=  \begin{bmatrix}
+	-41.25\\
+	-0.18\\
+	0.42\\
+	\end{bmatrix}" />
+</p>
+
+We compare the decision boundaries of the generative model and discriminative model in
+Fig. 4 and Fig. 5, respectively. 
+
+<p align = "center">
+<img width = "400" height ="300" src = "https://user-images.githubusercontent.com/45757826/57550495-df328800-7366-11e9-9eb9-b94f181338c7.png">
+
+Figure 4. The generative model and its decision boundary
+</p>
+
+<p align = "center">
+<img width = "400" height ="300" src = "https://user-images.githubusercontent.com/45757826/57550451-b611f780-7366-11e9-925d-3bc0aca8b330.png">
+
+Figure 5. The generative model and its decision boundary
+</p>
+
+By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a smoother nonlinear boundary which better separates the two classes of data.
+
+
+
 
 
 # How To Use
