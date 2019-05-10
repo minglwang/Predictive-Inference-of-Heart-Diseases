@@ -80,6 +80,7 @@ Now we have
 
 Given a confidence level <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Calpha%3D95%5C%25" alt=" \inline \alpha=95\%" />, we can get a confidence region 
 	<img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cbeta_1%3D-10.1%5Cpm%200.6" alt="\inline \beta_1=-10.1\pm 0.6" />, <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cbeta_2%3D2.0%5Cpm%200.008." alt="\inline \beta_2=2.0\pm 0.008." />
+
 The code for calculating the confidence interval is given in [confidence_interval.m](#).
 
 
