@@ -43,12 +43,16 @@ We now consider a linear predictor with the form:
 <img src="https://tex.s2cms.ru/svg/%5Chat%7By%7D%20%3D%20%5Cphi(x)%5ET%20%5Cboldsymbol%7B%5Cbeta%7D" alt="\hat{y} = \phi(x)^T \boldsymbol{\beta}" />
 </p>
 
-where <img src="https://tex.s2cms.ru/svg/%5Cphi(x)%20%3D%20%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_%7B1%7D%20x_%7B2%7D%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="\phi(x) = \begin{bmatrix}
+where 
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%5Cphi(x)%20%3D%20%5Cbegin%7Bbmatrix%7D%0A1%5C%5C%0Ax_1%5C%5C%0Ax_2%5C%5C%0Ax_%7B1%7D%20x_%7B2%7D%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="\phi(x) = \begin{bmatrix}
 1\\
 x_1\\
 x_2\\
 x_{1} x_{2}\\
-\end{bmatrix}" /> and <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cboldsymbol%7B%5Cbeta%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%5Cbeta_%7B1%7D%5C%5C%20%5Cbeta_%7B2%7D%5C%5C%20%5Cbeta_%7B3%7D%5C%5C%20%5Cbeta_%7B4%7D%5C%5C%20%5Cend%7Bbmatrix%7D" alt="\inline \boldsymbol{\beta} = \begin{bmatrix}\beta_{1}\\ \beta_{2}\\ \beta_{3}\\ \beta_{4}\\ \end{bmatrix}" /> .
+\end{bmatrix}" />,    
+<img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cboldsymbol%7B%5Cbeta%7D%20%3D%20%5Cbegin%7Bbmatrix%7D%5Cbeta_%7B1%7D%5C%5C%20%5Cbeta_%7B2%7D%5C%5C%20%5Cbeta_%7B3%7D%5C%5C%20%5Cbeta_%7B4%7D%5C%5C%20%5Cend%7Bbmatrix%7D" alt="\inline \boldsymbol{\beta} = \begin{bmatrix}\beta_{1}\\ \beta_{2}\\ \beta_{3}\\ \beta_{4}\\ \end{bmatrix}" /> .
+</p>
 
 The plug-in estimator for the prediction weight <img src="https://tex.s2cms.ru/svg/b" alt="b" /> is the least-square estimate,
 
