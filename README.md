@@ -8,7 +8,7 @@
 - [How To Use](#how_to_use)
 
 
-#Data Description
+# Data Description
 
 The heart diseases data, stored in [data_bloodpressure_03.csv](#) and [data_heart_01_y0.csv](#) and [data_heart_01_y1.csv](#), contain the following variates:
 1. *blood pressures* of patients
@@ -23,9 +23,6 @@ The blood pressure data of the patients with/ without medications are presented 
 						Figure 1. medication vs.  blood presure
 </p>
  
-
-
-
 
 There are 4 new patients with their ages and blood pressures as follows:
 
