@@ -109,12 +109,11 @@ So, we can use the [binary search method](#) to find this region. Here, <img src
 <p align = "center">
 <img width = "400" height = "300" src = "https://user-images.githubusercontent.com/45757826/57531896-d88e1b80-733a-11e9-94ac-738bfc38755c.png">
 </p>
-<p style="text-align: center;">
+
 Figure 1. The predictions and the prediction regions of the four new patients. 
-</p>
 
-**We can see from Fig. 1 that **
 
+We can see from Fig. 1 that
 - patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
 - aged patients are more likely to have higher blood pressure.
 
