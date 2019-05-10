@@ -1,5 +1,3 @@
-
-      
 # Predictive-Inferences-of-Heart_Diseases
 
 # Table of Content
@@ -128,11 +126,11 @@ We can see from Fig. 1 that
 - patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
 - aged patients are more likely to have higher blood pressure.
 
-
+[Back To Top]()
 
 ## Disease prognosis
 
 
 
-# How To Use
+# How To Use (# Predictive-Inferences-of-Heart_Diseases)
 
