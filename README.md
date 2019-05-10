@@ -1,14 +1,14 @@
 # Predictive-Inferences-of-Heart-Diseases
 
 # Table of Content
-- [Data Decription](#data_description)
+- [Data Description](#data_description)
 - [Predictive Inferences](#predictive_inference)
   - [Blood Pressure Prediction](#blood_pressure)
   - [Disease Prognosis](#disease_prognosis)
 - [How To Use](#how_to_use)
 
 
-# Data Decription
+#Data Description
 
 The heart diseases data, stored in [data_bloodpressure_03.csv](#) and [data_heart_01_y0.csv](#) and [data_heart_01_y1.csv](#), contain the following variates:
 1. *blood pressures* of patients
