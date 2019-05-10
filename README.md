@@ -84,7 +84,7 @@ Given a confidence level <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Cal
 The code for calculating the confidence interval is given in [confidence_interval.m](#).
 
 
-Given the *age* and *medication* Use our method, we calculate the non-parametric prediction region. The prediction of new patient \# 1 is calculated using the learned predictor above,
+Given the *age* and *medication* of the new patients,  we calculate the non-parametric prediction region using the above method. The prediction of new patient # 1 is calculated using the learned predictor above,
 
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%5Chat%7By%7D_%7B%231%7D%3D%5Cphi%5E%7BT%7D(x_%7B%5C%231%7D)%5Chat%7B%5Cbeta%7D" alt="\hat{y}_{#1}=\phi^{T}(x_{\#1})\hat{\beta}" />
