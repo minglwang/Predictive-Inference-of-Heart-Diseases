@@ -1,10 +1,11 @@
-# Predictive-Inferences-of-Heart-Diseases
+# Statistical-Inferences-of-Heart-Diseases
 
 # Table of Content
 - [Data Description](#data-description)
 - [Predictive Inferences](#predictive-inferences)
   - [Blood Pressure Prediction](#blood-pressure-prediction)
   - [Disease Prognosis](#disease-prognosis)
+- [Causal Effect of Medication](#causal effect-of-medication)
 - [How To Use](#how-to-use)
 
 
@@ -256,6 +257,12 @@ Fig. 4 and Fig. 5, respectively.
 By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a smoother nonlinear boundary which better separates the two classes of data.
 
 [Back To The Top](#predictive-inferences-of-heart-diseases)
+
+
+
+# Causal Effect of Medication
+
+
 
 
 
