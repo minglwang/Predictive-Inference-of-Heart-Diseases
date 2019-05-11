@@ -264,15 +264,22 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 
 # Causal Inference of Medications
 
-</p>
-
 <p align = "center">
 <img width = "500" height ="300" src = "https://user-images.githubusercontent.com/45757826/57566604-edb48a00-73ce-11e9-8575-90e518fcace9.png">
 
-					Figure 6. causal relations
+						Figure 6. causal structure S
 </p>
 
 
+We consider *age* <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> to be a confounding variable that affects both the probability of taking the medication (<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20x_1" alt=" \inline x_1" />) as well as the *blood pressure* <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" />. Set up the causal structure <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cmathcal%7BS%7D" alt="\inline \mathcal{S}" /> as a graph, where <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> is a valid control variable.
+
+The counterfactual graph is given 
+
+<p align = "center">
+<img width = "300" height ="200" src = "https://user-images.githubusercontent.com/45757826/57571763-43f6ec80-7412-11e9-9e7e-1c53b4c921a1.png">
+
+						Figure 7. counterfact graph S'
+</p>
 
 
 # How To Use
