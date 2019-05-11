@@ -286,7 +286,7 @@ The causal effect of medication, denoted as <img src="https://tex.s2cms.ru/svg/%
 - linear predictor
 - weighted average form
 
-In the linear predictor form, we use a linear predictor to approximate <img src="https://tex.s2cms.ru/svg/%5Cinline%20E%5By%5Cmid%20x_1%20%3D%20x'%2C%20x_2%5D" alt="\inline E[y\mid x_1 = x', x_2]" />,
+In the linear predictor form, we use a linear predictor to approximate <img src="https://tex.s2cms.ru/svg/%5Cinline%20E%5By%5Cmid%20x_1%20%3D%20x_1'%2C%20x_2%5D" alt="\inline E[y\mid x_1 = x_1', x_2]" />,
 
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/y%20%3D%20%5Cbeta_%7B0%7D%2B%5Cbeta_%7B1%7Dx_1%2B%20%5Cbeta_%7B2%7Dx_2%2B%20%5Cbeta_3%20x_1%20x_2%20" alt="y = \beta_{0}+\beta_{1}x_1+ \beta_{2}x_2+ \beta_3 x_1 x_2 " />
