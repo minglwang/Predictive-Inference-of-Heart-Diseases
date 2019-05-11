@@ -312,7 +312,7 @@ Since the exposure <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1" alt="\inl
 The identified parameter <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7B%5Cbeta%7D%3D%5B-19.5756%2C0.3901%5D." alt="\inline \hat{\beta}=[-19.5756,0.3901]." />  Substituting <img src="https://tex.s2cms.ru/svg/%5Chat%7B%5Cbeta%7D" alt="\hat{\beta}" /> back to the logistic regression model we can get the probabilities <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7Bp%7D(x_1%3D1%7Cx_2)" alt=" \inline \hat{p}(x_1=1|x_2)" /> and <img src="https://tex.s2cms.ru/svg/%5Chat%7Bp%7D(x_1%3D0%7Cx_2)%3D1-%5Chat%7Bp%7D(x_1%3D1%7Cx_2)" alt="\hat{p}(x_1=0|x_2)=1-\hat{p}(x_1=1|x_2)" />. 
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/%09%5Chat%7B%5Ctau%7D%3DE%5By_%7Bx_1'%3D1%7D%5D-%5CE%5By_%7Bx_1'%3D0%7D%5D%3D%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x_1%3D1%7Cx_2)%7Dy%5Cright%5D-E_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x_1%3D0%7Cx_%7B2%7D)%7Dy%5Cright%5D%3D-5.3405." alt="	\hat{\tau}=E[y_{x_1'=1}]-\E[y_{x_1'=0}]=\E_{n'}\left[\frac{1}{\hat{p}(x_1=1|x_2)}y\right]-E_{n'}\left[\frac{1}{\hat{p}(x_1=0|x_{2})}y\right]=-5.3405." />
+<img src="https://tex.s2cms.ru/svg/%09%5Chat%7B%5Ctau%7D%3DE%5By_%7Bx_1'%3D1%7D%5D-E%5By_%7Bx_1'%3D0%7D%5D%3DE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x_1%3D1%7Cx_2)%7Dy%5Cright%5D-E_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x_1%3D0%7Cx_%7B2%7D)%7Dy%5Cright%5D%3D-5.3405." alt="	\hat{\tau}=E[y_{x_1'=1}]-E[y_{x_1'=0}]=E_{n'}\left[\frac{1}{\hat{p}(x_1=1|x_2)}y\right]-E_{n'}\left[\frac{1}{\hat{p}(x_1=0|x_{2})}y\right]=-5.3405." />
 </p>
 
 # How To Use
