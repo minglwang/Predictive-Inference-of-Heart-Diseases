@@ -5,7 +5,7 @@
 - [Predictive Inferences](#predictive-inferences)
   - [Blood Pressure Prediction](#blood-pressure-prediction)
   - [Disease Prognosis](#disease-prognosis)
-- [Causal Effect of Medication](#causal effect-of-medication)
+- [Causal Inference of Medications](#causal-inference-of-medication)
 - [How To Use](#how-to-use)
 
 
@@ -42,6 +42,8 @@ When a new patient arrives at a hospital, we would like to
 - predict the blood pressure of new patients with confidence intervals
 
 - prognosis whether the patient has heart disease or not
+
+- quatify the causal effect of the medication on blood pressure 
 
 
 
@@ -260,7 +262,7 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 
 
 
-# Causal Effect of Medication
+# Causal Inference of Medications
 
 
 
