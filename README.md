@@ -156,10 +156,12 @@ The Gaussian covariate models are used for the data,
 " />
 </p>
 
+where <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cboldsymbol%7Bx%7D%20%3D%5C%7Bx_1%2C%20x_2%5C%7D%20" alt="\inline \boldsymbol{x} =\{x_1, x_2\} " />.
+
 In the training phase, we have the label of each patient, e.g. we know the patient has heart disease or not. Then, we can use the data to estimate the model parameters, 
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/%20%5Cboldsymbol%7B%5Cmu%7D_k%3D%5CE_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D%2C%5Cquad%09%5Cboldsymbol%7B%5CSigma%7D_%7Bk%7D%3D%5Ctext%7BCov%7D_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D." alt=" \boldsymbol{\mu}_k=\E_{n} [\boldsymbol{x}_{i}|y=k],\quad	\boldsymbol{\Sigma}_{k}=\text{Cov}_{n} [\boldsymbol{x}_{i}|y=k]." />
+<img src="https://tex.s2cms.ru/svg/%20%5Cboldsymbol%7B%5Cmu%7D_k%3DE_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D%2C%5Cquad%09%5Cboldsymbol%7B%5CSigma%7D_%7Bk%7D%3D%5Ctext%7BCov%7D_%7Bn%7D%20%5B%5Cboldsymbol%7Bx%7D_%7Bi%7D%7Cy%3Dk%5D." alt=" \boldsymbol{\mu}_k=E_{n} [\boldsymbol{x}_{i}|y=k],\quad	\boldsymbol{\Sigma}_{k}=\text{Cov}_{n} [\boldsymbol{x}_{i}|y=k]." />
 </p>
 
 Then the categorical distribution or prior distribution of each category can be obtained as  
