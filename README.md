@@ -281,6 +281,36 @@ The counterfactual graph is given
 						Figure 7. counterfact graph S'
 </p>
 
+The causal effect of medication, denoted as <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Ctau%20" alt="\inline \tau " /> can be calculated by two approaches
+
+- linear predictor
+- weighted average form
+
+In the linear predictor form, we assume
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20%5Ctau%20%3D%20E_%7Bx_%7B2%7D%7D%5Cleft%5B%20E%5By%5Cmid%20x_1'%3D1%2C%20x_2%5D%20-%20E%5By%5Cmid%20x_1'%3D0%2C%20x_2%5D%20%5Cright%5D%20%3D%20%20E_%7Bx_%7B2%7D%7D%5Cleft%5B%20%5Cbeta_1%20%2B%20%5Cbeta_3%20x_2%5Cright%5D%20%3D%20-9.99" alt=" \tau = E_{x_{2}}\left[ E[y\mid x_1'=1, x_2] - E[y\mid x_1'=0, x_2] \right] =  E_{x_{2}}\left[ \beta_1 + \beta_3 x_2\right] = -9.99" />
+</p>
+
+ The weighted average form can be expressed as
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%0A%09%5CE%5By_%7B%5Ctilde%7Bx%7D%7D%5D%3D%5CE%5Cleft%5B%5Cfrac%7BI(x%3D%5Ctilde%7Bx%7D)%7D%7Bp(x%5Cmid%20w)%7Dy%5Cright%5D." alt="
+	\E[y_{\tilde{x}}]=\E\left[\frac{I(x=\tilde{x})}{p(x\mid w)}y\right]." />
+</p>
+
+Since the exposure <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1" alt="\inline x_1" /> is binary data, we use the logistic model for the conditional probability <img src="https://tex.s2cms.ru/svg/%20%5Cmid%20p(x%5Cmid%20w)" alt=" \mid p(x\mid w)" />,
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/p(x%3D1%5Cmid%20w)%3D(1%2B%5Cexp(%5Cbeta_0%2B%5Cbeta_1w))%5E%7B-1%7D." alt="p(x=1\mid w)=(1+\exp(\beta_0+\beta_1w))^{-1}." />
+</p>
+
+The identified parameter <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7B%5Cbeta%7D%3D%5B-19.5756%2C0.3901%5D." alt="\inline \hat{\beta}=[-19.5756,0.3901]." />  Substituting <img src="https://tex.s2cms.ru/svg/%5Chat%7B%5Cbeta%7D" alt="\hat{\beta}" /> back to the logistic regression model we can get the probabilities <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7Bp%7D(x%3D1%7Cw)" alt=" \inline \hat{p}(x=1|w)" /> and <img src="https://tex.s2cms.ru/svg/%5Chat%7Bp%7D(x%3D0%7Cw)%3D1-%5Chat%7Bp%7D(x%3D1%7Cw)" alt="\hat{p}(x=0|w)=1-\hat{p}(x=1|w)" />. 
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%09%5Chat%7B%5Ctau%7D%3D%5CE%5By_%7B%5Ctilde%7Bx%7D%3D1%7D%5D-%5CE%5By_%7B%5Ctilde%7Bx%7D%3D0%7D%5D%3D%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D1%7Cw)%7Dy%5Cright%5D-%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D0%7Cw)%7Dy%5Cright%5D%3D-5.3405." alt="	\hat{\tau}=\E[y_{\tilde{x}=1}]-\E[y_{\tilde{x}=0}]=\E_{n'}\left[\frac{1}{\hat{p}(x=1|w)}y\right]-\E_{n'}\left[\frac{1}{\hat{p}(x=0|w)}y\right]=-5.3405." />
+</p>
+
 
 # How To Use
 
