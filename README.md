@@ -329,5 +329,5 @@ addpath('your directories/Predictive-Inferences-of-Heart-Diseases/heart_disease_
 - run [disease_prognosis.m](https://github.com/minglwang/Predictive-Inferences-of-Heart-Diseases/blob/master/disease_prognosis.m) to get the results in Fig. 3 to Fig. 5 
 - run [causal_inferences.m](https://github.com/minglwang/Statistical-Inferences-of-Heart-Diseases/blob/master/causal_inference.m) to quantify the causal effect of medication on the blood pressure.
 
-[Back To The Top](#predictive-inferences-of-heart-diseases)
+[Back To The Top](#statistical-inferences-of-heart-diseases)
 
