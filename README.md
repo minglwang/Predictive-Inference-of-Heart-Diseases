@@ -276,7 +276,7 @@ We consider *age* <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inli
 The counterfactual graph is given 
 
 <p align = "center">
-<img width = "300" height ="200" src = "https://user-images.githubusercontent.com/45757826/57571763-43f6ec80-7412-11e9-9e7e-1c53b4c921a1.png">
+<img width = "300" height ="200" src = "https://user-images.githubusercontent.com/45757826/57571814-f62eb400-7412-11e9-8cd0-f67652ba20d6.png">
 
 						Figure 7. counterfact graph S'
 </p>
