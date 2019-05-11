@@ -137,7 +137,7 @@ We can see from Fig. 2 that
 - patients with medication will have a lower blood pressure,  (patient #1 > patient #3, patient #2 > patient #4)  
 - aged patients are more likely to have higher blood pressure.
 
-[Back To The Top](#predictive-inferences-of-heart-diseases)
+[Back To The Top](#statistical-inferences-of-heart-diseases)
 
 ## Disease Prognosis
 
@@ -256,7 +256,7 @@ Fig. 4 and Fig. 5, respectively.
 
 By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a smoother nonlinear boundary which better separates the two classes of data.
 
-[Back To The Top](#predictive-inferences-of-heart-diseases)
+[Back To The Top](#statistical-inferences-of-heart-diseases)
 
 
 
