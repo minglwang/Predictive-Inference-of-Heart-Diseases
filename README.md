@@ -271,9 +271,9 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 </p>
 
 
-We consider *age* <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> to be a confounding variable that affects both the probability of taking the medication (<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20x_1" alt=" \inline x_1" />) as well as the *blood pressure* <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" />. Set up the causal structure <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cmathcal%7BS%7D" alt="\inline \mathcal{S}" /> as a graph, where <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> is a valid control variable.
+We consider *age* (<img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" />) to be a confounding variable that affects both the probability of taking the medication (<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20x_1" alt=" \inline x_1" />) as well as the *blood pressure* <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" />. Set up the causal structure <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cmathcal%7BS%7D" alt="\inline \mathcal{S}" /> as a graph, where <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> is a valid control variable.
 
-The counterfactual graph is given 
+The counterfactual graph is given in Fig. 7.
 
 <p align = "center">
 <img width = "300" height ="200" src = "https://user-images.githubusercontent.com/45757826/57571814-f62eb400-7412-11e9-8cd0-f67652ba20d6.png">
@@ -286,29 +286,34 @@ The causal effect of medication, denoted as <img src="https://tex.s2cms.ru/svg/%
 - linear predictor
 - weighted average form
 
-In the linear predictor form, we assume
+In the linear predictor form, we use a linear predictor to approximate <img src="https://tex.s2cms.ru/svg/%5Cinline%20E%5By%5Cmid%20x_1%20%3D%20x'%2C%20x_2%5D" alt="\inline E[y\mid x_1 = x', x_2]" />,
 
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/y%20%3D%20%5Cbeta_%7B0%7D%2B%5Cbeta_%7B1%7Dx_1%2B%20%5Cbeta_%7B2%7Dx_2%2B%20%5Cbeta_3%20x_1%20x_2%20" alt="y = \beta_{0}+\beta_{1}x_1+ \beta_{2}x_2+ \beta_3 x_1 x_2 " />
+</p>
+Then the causal effect of medication can be calculated as
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%20%5Ctau%20%3D%20E_%7Bx_%7B2%7D%7D%5Cleft%5B%20E%5By%5Cmid%20x_1'%3D1%2C%20x_2%5D%20-%20E%5By%5Cmid%20x_1'%3D0%2C%20x_2%5D%20%5Cright%5D%20%3D%20%20E_%7Bx_%7B2%7D%7D%5Cleft%5B%20%5Cbeta_1%20%2B%20%5Cbeta_3%20x_2%5Cright%5D%20%3D%20-9.99" alt=" \tau = E_{x_{2}}\left[ E[y\mid x_1'=1, x_2] - E[y\mid x_1'=0, x_2] \right] =  E_{x_{2}}\left[ \beta_1 + \beta_3 x_2\right] = -9.99" />
 </p>
 
- The weighted average form can be expressed as
+In addition, the weighted average form can be expressed as
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/%0A%09%5CE%5By_%7B%5Ctilde%7Bx%7D%7D%5D%3D%5CE%5Cleft%5B%5Cfrac%7BI(x%3D%5Ctilde%7Bx%7D)%7D%7Bp(x%5Cmid%20w)%7Dy%5Cright%5D." alt="
-	\E[y_{\tilde{x}}]=\E\left[\frac{I(x=\tilde{x})}{p(x\mid w)}y\right]." />
+<img src="https://tex.s2cms.ru/svg/%0A%09%5CE%5By_%7Bx_%7B1%7D'%7D%5D%3D%5CE%5Cleft%5B%5Cfrac%7BI(x_1%3Dx_%7B1%7D')%7D%7Bp(x_1%5Cmid%20x_2)%7Dy%5Cright%5D." alt="
+	\E[y_{x_{1}'}]=\E\left[\frac{I(x_1=x_{1}')}{p(x_1\mid x_2)}y\right]." />
 </p>
 
-Since the exposure <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1" alt="\inline x_1" /> is binary data, we use the logistic model for the conditional probability <img src="https://tex.s2cms.ru/svg/%20%5Cmid%20p(x%5Cmid%20w)" alt=" \mid p(x\mid w)" />,
+Since the exposure <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_1" alt="\inline x_1" /> is binary data, we use the logistic model for the conditional probability <img src="https://tex.s2cms.ru/svg/%20%5Cmid%20p(x%5Cmid%20w)" alt=" \mid p(x_{1}\mid x_{2})" />,
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/p(x%3D1%5Cmid%20w)%3D(1%2B%5Cexp(%5Cbeta_0%2B%5Cbeta_1w))%5E%7B-1%7D." alt="p(x=1\mid w)=(1+\exp(\beta_0+\beta_1w))^{-1}." />
+<img src="https://tex.s2cms.ru/svg/p(x%3D1%5Cmid%20w)%3D(1%2B%5Cexp(%5Cbeta_0%2B%5Cbeta_1w))%5E%7B-1%7D." alt="p(x_1=1\mid x_2)=(1+\exp(\beta_0+\beta_1x_1))^{-1}." />
 </p>
 
-The identified parameter <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7B%5Cbeta%7D%3D%5B-19.5756%2C0.3901%5D." alt="\inline \hat{\beta}=[-19.5756,0.3901]." />  Substituting <img src="https://tex.s2cms.ru/svg/%5Chat%7B%5Cbeta%7D" alt="\hat{\beta}" /> back to the logistic regression model we can get the probabilities <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7Bp%7D(x%3D1%7Cw)" alt=" \inline \hat{p}(x=1|w)" /> and <img src="https://tex.s2cms.ru/svg/%5Chat%7Bp%7D(x%3D0%7Cw)%3D1-%5Chat%7Bp%7D(x%3D1%7Cw)" alt="\hat{p}(x=0|w)=1-\hat{p}(x=1|w)" />. 
+
+The identified parameter <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Chat%7B%5Cbeta%7D%3D%5B-19.5756%2C0.3901%5D." alt="\inline \hat{\beta}=[-19.5756,0.3901]." />  Substituting <img src="https://tex.s2cms.ru/svg/%5Chat%7B%5Cbeta%7D" alt="\hat{\beta}" /> back to the logistic regression model we can get the probabilities <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Chat%7Bp%7D(x%3D1%7Cw)" alt=" \inline \hat{p}(x_1=1|x_2)" /> and <img src="https://tex.s2cms.ru/svg/%5Chat%7Bp%7D(x%3D0%7Cw)%3D1-%5Chat%7Bp%7D(x%3D1%7Cw)" alt="\hat{p}(x_1=0|x_2)=1-\hat{p}(x_1=1|x_2)" />. 
 
 <p align = "center">
-<img src="https://tex.s2cms.ru/svg/%09%5Chat%7B%5Ctau%7D%3D%5CE%5By_%7B%5Ctilde%7Bx%7D%3D1%7D%5D-%5CE%5By_%7B%5Ctilde%7Bx%7D%3D0%7D%5D%3D%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D1%7Cw)%7Dy%5Cright%5D-%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D0%7Cw)%7Dy%5Cright%5D%3D-5.3405." alt="	\hat{\tau}=\E[y_{\tilde{x}=1}]-\E[y_{\tilde{x}=0}]=\E_{n'}\left[\frac{1}{\hat{p}(x=1|w)}y\right]-\E_{n'}\left[\frac{1}{\hat{p}(x=0|w)}y\right]=-5.3405." />
+<img src="https://tex.s2cms.ru/svg/%09%5Chat%7B%5Ctau%7D%3D%5CE%5By_%7B%5Ctilde%7Bx%7D%3D1%7D%5D-%5CE%5By_%7B%5Ctilde%7Bx%7D%3D0%7D%5D%3D%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D1%7Cw)%7Dy%5Cright%5D-%5CE_%7Bn'%7D%5Cleft%5B%5Cfrac%7B1%7D%7B%5Chat%7Bp%7D(x%3D0%7Cw)%7Dy%5Cright%5D%3D-5.3405." alt="	\hat{\tau}=\E[y_{x_{1}'=1}]-\E[y_{\tilde{x_1}=0}]=\E_{n'}\left[\frac{1}{\hat{p}(x_1=1|x_2)}y\right]-\E_{n'}\left[\frac{1}{\hat{p}(x_1=0|x_2)}y\right]=-5.3405." />
 </p>
 
 
