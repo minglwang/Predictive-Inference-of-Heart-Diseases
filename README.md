@@ -5,7 +5,7 @@
 - [Predictive Inferences](#predictive-inferences)
   - [Blood Pressure Prediction](#blood-pressure-prediction)
   - [Disease Prognosis](#disease-prognosis)
-- [Causal Inference of Medications](#causal-inference-of-medication)
+- [Causal Inference of Medication](#causal-inference-of-medication)
 - [How To Use](#how-to-use)
 
 
@@ -265,7 +265,7 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 
 
 
-# Causal Inference of Medications
+# Causal Inference of Medication
 
 <p align = "center">
 <img width = "500" height ="300" src = "https://user-images.githubusercontent.com/45757826/57566604-edb48a00-73ce-11e9-8575-90e518fcace9.png">
