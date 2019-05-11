@@ -271,9 +271,9 @@ By comparing Fig. 4 and Fig. 5, it is evident that the generative model gives a 
 </p>
 
 
-We consider *age* (<img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" />) to be a confounding variable that affects both the probability of taking the medication (<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20x_1" alt=" \inline x_1" />) as well as the *blood pressure* <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" />. Set up the causal structure <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cmathcal%7BS%7D" alt="\inline \mathcal{S}" /> as a graph, where <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> is a valid control variable.
+We consider *age* (<img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" />) to be a confounding variable that affects both the probability of taking the medication (<img src="https://tex.s2cms.ru/svg/%20%5Cinline%20x_1" alt=" \inline x_1" />) as well as the *blood pressure* <img src="https://tex.s2cms.ru/svg/%5Cinline%20y" alt="\inline y" />. We set up the causal structure <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cmathcal%7BS%7D" alt="\inline \mathcal{S}" /> as a graph in Fig. 6 
 
-The counterfactual graph is given in Fig. 7.
+The counterfactual graph is set up in Fig. 7, where <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_2" alt="\inline x_2" /> is a valid control variable.
 
 <p align = "center">
 <img width = "300" height ="200" src = "https://user-images.githubusercontent.com/45757826/57571814-f62eb400-7412-11e9-8cd0-f67652ba20d6.png">
