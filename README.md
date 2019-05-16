@@ -197,7 +197,8 @@ where
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%5Cpi_%7Bi%7D(%5Ctheta)%20%3Dp_%7B%5Ctheta%7D(y%3D1%20%5Cmid%20x)%20%3D%5Cfrac%7Bexp(%5Cphi%5E%7BT%7D(x_i)%5Ctheta)%7D%7B1%2B%20exp(%5Cphi%5E%7BT%7D(x_i)%5Ctheta)%7D%20" alt="\pi_{i}(\theta) =p_{\theta}(y=1 \mid x) =\frac{exp(\phi^{T}(x_i)\theta)}{1+ exp(\phi^{T}(x_i)\theta)} " /> 
 </p>
-is a parametric model. Then we use a [majorization-minimization search](https://github.com/minglwang/Statistical-Inferences-of-Heart-Diseases/blob/master/predictive_inference/major_min.m) method to compute
+is a parametric model. Then we use a 
+[majorization minimization search](https://github.com/minglwang/Statistical-Inferences-of-Heart-Diseases/blob/master/predictive_inference/major_min.m) method to compute
 
 
 <p align = "center">
